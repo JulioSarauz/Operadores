@@ -1,7 +1,7 @@
 ## Configuracion de Spring
 spring:
   application:
-    name: operador
+    name: ms-operador
   datasource:
     url: jdbc:h2:mem:operadordb;Mode=MySQL
   jpa:
@@ -31,4 +31,4 @@ eureka:
     hostname: ms-operador
 ## Configuracion secundaria (custom)
 getBook:
-  url: http://ms-books-catalogue/books/%s
+  url: http://back-end-ms-books-catalogue/books/%s

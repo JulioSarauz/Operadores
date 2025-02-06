@@ -11,7 +11,7 @@
 	<artifactId>operador</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>operador</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Proyecto que permite gestionar las compras</description>
 	<url/>
 	<licenses>
 		<license/>

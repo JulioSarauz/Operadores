@@ -2,6 +2,7 @@ package com.coac.operador.service;
 
 
 import com.coac.operador.controller.model.CarDto;
+import com.coac.operador.controller.model.CreateBookRequest;
 import com.coac.operador.controller.model.CreateCarRequest;
 import com.coac.operador.data.CarRepository;
 import com.coac.operador.data.model.Car;
@@ -66,6 +67,8 @@ public class CarServiceImpl implements CarService {
     @Override
     public Car createCar(CreateCarRequest request) {
         List<Book> books = request.getBooks().stream().map(booksFacade::getBook).filter(Objects::nonNull).toList();
+        System.out.println("libros");
+        System.out.println(books);
         //Otra opcion: Jakarta Validation: https://www.baeldung.com/java-validation
         if (   request != null && StringUtils.hasLength(request.getCodCar().trim())
                 && request.getBookId() != null
