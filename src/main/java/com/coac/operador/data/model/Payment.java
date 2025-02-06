@@ -35,9 +35,6 @@ public class Payment{
     @Column(name = Consts.AMOUNT)
     private Double amount;
 
-    @Column(name = C)
-
-
     public void update(PaymentDto paymentDto) {
         this.userId = paymentDto.getUserId();
         this.amount = paymentDto.getAmount();

@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 public class PaymentController {
     private final PaymentService service;
 
-    @GetMapping("/get")
+    @GetMapping("")
     @Operation(
             operationId = "Obtener pagos",
             description = "Operacion de lectura",
@@ -57,7 +57,7 @@ public class PaymentController {
         }
     }
 
-    @GetMapping("/get/{paymentId}")
+    @GetMapping("/{paymentId}")
     @Operation(
             operationId = "Obtener un pago",
             description = "Operacion de lectura",
@@ -81,7 +81,7 @@ public class PaymentController {
 
     }
 
-    @DeleteMapping("/delete/{paymentId}")
+    @DeleteMapping("/{paymentId}")
     @Operation(
             operationId = "Eliminar un pago",
             description = "Operacion de escritura",
@@ -103,7 +103,7 @@ public class PaymentController {
 
     }
 
-    @PostMapping("/add")
+    @PostMapping("")
     @Operation(
             operationId = "Insertar un pago",
             description = "Operacion de escritura",
@@ -135,7 +135,7 @@ public class PaymentController {
     }
 
 
-    @PatchMapping("/edit/{paymentId}")
+    @PatchMapping("/{paymentId}")
     @Operation(
             operationId = "Modificar parcialmente un pago",
             description = "RFC 7386. Operacion de escritura",
@@ -162,7 +162,7 @@ public class PaymentController {
     }
 
 
-    @PutMapping("/update/{productId}")
+    @PutMapping("/{productId}")
     @Operation(
             operationId = "Modificar totalmente un pago",
             description = "Operacion de escritura",

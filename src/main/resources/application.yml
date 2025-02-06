@@ -19,7 +19,8 @@ spring:
 ## Configuracion de Instancia
 server:
   port: 8088
-
+  error:
+    include-stacktrace: on_param
 ## Configuracion del cliente de Eureka
 eureka:
   client:
@@ -27,4 +28,7 @@ eureka:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
-    hostname: operador
+    hostname: ms-operador
+## Configuracion secundaria (custom)
+getBook:
+  url: http://ms-books-catalogue/books/%s
